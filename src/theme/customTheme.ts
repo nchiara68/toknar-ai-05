@@ -6,7 +6,7 @@ const customTheme = {
   tokens: {
     colors: {
       background: {
-        primary: { value: '#002b4b' },
+        primary: { value: '#f2f6f9' },
       },
     },
   },

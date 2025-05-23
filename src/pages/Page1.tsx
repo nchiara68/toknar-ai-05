@@ -14,7 +14,7 @@ const Home: React.FC = () => {
   return (
     <View
       padding={tokens.space.large}
-      backgroundColor="#002b4b"
+      backgroundColor="#ffffff"
       height="100vh"
       style={{
         display: 'flex',
@@ -24,13 +24,13 @@ const Home: React.FC = () => {
         textAlign: 'center',
       }}
     >
-      <Heading level={1} color="white">
-        🏡 Welcome to the Home Page!
+      <Heading level={1} color="black">
+        🏡 Welcome to the Page 1!
       </Heading>
       <Text
         fontSize={tokens.fontSizes.large}
         marginTop={tokens.space.medium}
-        color="white" // ✅ white text
+        color="black" // ✅ white text
       >
         This is a basic test page using Amplify UI.
       </Text>

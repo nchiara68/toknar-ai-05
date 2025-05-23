@@ -25,7 +25,7 @@ const Home: React.FC = () => {
       }}
     >
       <Heading level={1} color="white">
-        🏡 Welcome to the Home Page!
+        🏡 Welcome to the Page 2!
       </Heading>
       <Text
         fontSize={tokens.fontSizes.large}

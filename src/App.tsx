@@ -1,52 +1,47 @@
 // src/App.tsx
-import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
-import { Authenticator, ThemeProvider } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react/styles.css';
-import './amplify/AmplifyConfigure';
+//import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Text } from '@aws-amplify/ui-react';
 
-import Home from './pages/Home';
-import ProtectedRoute from './components/ProtectedRoute';
-import LayoutWrapper from './components/LayoutWrapper';
-import customTheme from './theme/customTheme';
-import tokLogo from './assets/TOKNAR-02-WHITE.png';
+import DashboardLayout from './layout/DashboardLayout';
+import Page1 from './pages/Page1';
+import Page2 from './pages/Page2';
+import Page3 from './pages/Page3';
+import SignOutPage from './pages/SignOutPage';
 
-export default function App() {
+import { Auth } from './components/Auth1';
+
+const App = () => {
   return (
-    <ThemeProvider theme={customTheme}>
-      <BrowserRouter>
-        <LayoutWrapper>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Authenticator
-                  components={{
-                    Header: () => (
-                      <div style={{ textAlign: 'center', padding: '1.5rem' }}>
-                        <img
-                          src={tokLogo} // Ensure this is placed in your `public/assets/` folder
-                          alt="Toknar Logo"
-                          style={{ maxWidth: '300px', height: 'auto' }}
-                        />
-                      </div>
-                    ),
-                  }}
-                >
-                  {() => <Navigate to="/home" replace />}
-                </Authenticator>
-              }
-            />
-            <Route
-              path="/home"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
-          </Routes>
-        </LayoutWrapper>
-      </BrowserRouter>
-    </ThemeProvider>
+   <Auth>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<DashboardLayout />}>
+          {/* ✅ This handles the root URL "/" */}
+          <Route index element={<Page1 />} />
+
+          {/* Top nav */}
+          <Route path="/nav1" element={<Page1 />} />
+          <Route path="/nav2" element={<Page2 />} />
+          <Route path="/nav3" element={<Page3 />} />
+          <Route path="/signout" element={<SignOutPage />} />
+
+
+          {/* Sidebar routes */}
+          <Route path="/section1/sub1" element={<Page1 />} />
+          <Route path="/section1/sub2" element={<Page2 />} />
+          <Route path="/section2/sub1" element={<Page3 />} />
+          <Route path="/section2/sub2" element={<Page1 />} />
+          <Route path="/section3/sub1" element={<Page2 />} />
+          <Route path="/section3/sub2" element={<Page3 />} />
+
+          {/* Fallback route for unknown paths */}
+          <Route path="*" element={<Text color="red">404 - Page Not Found</Text>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    </Auth>
   );
-}
+};
+
+export default App;

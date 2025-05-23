@@ -63,7 +63,7 @@ const DashboardLayout: React.FC = () => {
         }}
       >
        <img
-            src="/public/TOKNAR-01-NAVY.png"
+            src="/assets/TOKNAR-01-NAVY.png"
             alt="Toknar Logo"
             style={{
                 width: '100%',

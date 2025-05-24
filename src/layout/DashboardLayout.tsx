@@ -126,6 +126,7 @@ const DashboardLayout: React.FC = () => {
   <SidebarLink to="/nav1" label="Nav 1" />
   <SidebarLink to="/nav2" label="Nav 2" />
   <SidebarLink to="/nav3" label="Nav 3" />
+  <SidebarLink to="/nav4" label="Nav 4" />
   <SidebarLink to="/signout" label="Sign Out" /> {/* ✅ New */}
 </Flex>
 

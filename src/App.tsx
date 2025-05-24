@@ -7,6 +7,7 @@ import DashboardLayout from './layout/DashboardLayout';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
+import Page4 from './pages/Page4';
 import SignOutPage from './pages/SignOutPage';
 
 import { Auth } from './components/Auth1';
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/nav1" element={<Page1 />} />
           <Route path="/nav2" element={<Page2 />} />
           <Route path="/nav3" element={<Page3 />} />
+          <Route path="/nav4" element={<Page4 />} />
           <Route path="/signout" element={<SignOutPage />} />
 
 

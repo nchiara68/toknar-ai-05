@@ -10,7 +10,7 @@ import Page3 from './pages/Page3';
 import Page4 from './pages/Page4';
 import SignOutPage from './pages/SignOutPage';
 
-import { Auth } from './components/Auth1';
+import { Auth } from './components/authenticator/Auth1';
 
 const App = () => {
   return (

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import tokLogo from '../assets/TOKNAR-01-NAVY.png';
+import tokLogo from '../../assets/TOKNAR-01-NAVY.png';
 
 export function Auth({ children }: { children: React.ReactNode }) {
   return (

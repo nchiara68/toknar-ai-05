@@ -2,10 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 //import './index.css'
 //import App from './App.tsx'
-import { Amplify } from 'aws-amplify'
-import config from '../amplify_outputs.json'
+//import { Amplify } from 'aws-amplify'
+//import config from '../amplify_outputs.json'
 import App from './App'
-Amplify.configure(config);
+//Amplify.configure(config);
 // Create a typed config that matches Amplify expectations
 /*const amplifyConfig: Record<string, unknown> = {
   ...config,
